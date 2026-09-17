@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Buds — Wireless Earbuds</title>
+    <meta
+      name="description"
+      content="Aurora Buds: a product showcase page for a fictional pair of wireless earbuds, built with responsive HTML and CSS."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="logo">Aurora<span class="logo-dot">Buds</span></a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#specs">Specs</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#buy">Buy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO / GALLERY -->
+      <section id="gallery" class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">New — Aurora Series</p>
+            <h1>Aurora Buds</h1>
+            <p class="hero-sub">
+              True-wireless earbuds with active noise cancellation, 30-hour
+              total battery life, and a sound signature tuned for every genre.
+            </p>
+            <div class="price-row">
+              <span class="price">$129</span>
+              <span class="price-old">$159</span>
+            </div>
+            <a class="btn btn-primary" href="#buy">Add to cart</a>
+          </div>
+
+          <div class="hero-gallery">
+            <div class="hero-gallery__main" id="mainImage" aria-hidden="true">
+              <svg viewBox="0 0 240 240" role="img" aria-label="Illustration of Aurora Buds earbud case, open, in violet gradient">
+                <rect x="40" y="70" width="160" height="110" rx="24" fill="rgba(255,255,255,0.14)" />
+                <circle cx="90" cy="120" r="34" fill="rgba(255,255,255,0.85)" />
+                <circle cx="150" cy="120" r="34" fill="rgba(255,255,255,0.65)" />
+                <rect x="70" y="40" width="100" height="20" rx="10" fill="rgba(255,255,255,0.4)" />
+              </svg>
+            </div>
+            <div class="hero-gallery__thumbs" role="list">
+              <button type="button" class="thumb thumb--active" data-variant="violet" aria-label="View violet colorway" role="listitem"></button>
+              <button type="button" class="thumb" data-variant="cyan" aria-label="View cyan colorway" role="listitem"></button>
+              <button type="button" class="thumb" data-variant="coral" aria-label="View coral colorway" role="listitem"></button>
+              <button type="button" class="thumb" data-variant="slate" aria-label="View slate colorway" role="listitem"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section">
+        <h2>Features</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔇</div>
+            <h3>Active Noise Cancellation</h3>
+            <p>Adaptive ANC blocks up to 95% of ambient noise, tuned automatically to your surroundings.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔋</div>
+            <h3>30-Hour Battery</h3>
+            <p>8 hours per charge, plus 22 more from the pocket-sized charging case.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">💧</div>
+            <h3>IPX5 Water Resistant</h3>
+            <p>Sweat- and splash-resistant, built for runs, gym sessions, and rainy commutes.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎚️</div>
+            <h3>Custom EQ</h3>
+            <p>Fine-tune bass, mids, and treble in the companion app, or pick a genre preset.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📶</div>
+            <h3>Instant Pairing</h3>
+            <p>Bluetooth 5.3 with multipoint — stay connected to two devices at once.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎙️</div>
+            <h3>Clear Calls</h3>
+            <p>Dual beamforming microphones with wind-noise reduction for crisp calls.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SPECS -->
+      <section id="specs" class="section section-alt">
+        <h2>Specifications</h2>
+        <div class="specs-wrap">
+          <table class="specs-table">
+            <caption class="sr-only">Aurora Buds technical specifications</caption>
+            <tbody>
+              <tr><th scope="row">Driver size</th><td>10mm dynamic</td></tr>
+              <tr><th scope="row">Battery (buds)</th><td>Up to 8 hours per charge</td></tr>
+              <tr><th scope="row">Battery (with case)</th><td>Up to 30 hours total</td></tr>
+              <tr><th scope="row">Charging</th><td>USB-C, wireless Qi-compatible</td></tr>
+              <tr><th scope="row">Connectivity</th><td>Bluetooth 5.3, multipoint</td></tr>
+              <tr><th scope="row">Water resistance</th><td>IPX5 (buds), IPX4 (case)</td></tr>
+              <tr><th scope="row">Weight</th><td>4.8g per bud, 42g case</td></tr>
+              <tr><th scope="row">Colors</th><td>Violet, Cyan, Coral, Slate</td></tr>
+            </tbody>
+          </table>
+
+          <ul class="in-box">
+            <h3>In the box</h3>
+            <li>Aurora Buds (pair)</li>
+            <li>Charging case</li>
+            <li>USB-C to USB-C cable</li>
+            <li>3 sizes of silicone ear tips</li>
+            <li>Quick start guide</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews" class="section">
+        <h2>Reviews</h2>
+        <div class="reviews-summary">
+          <span class="rating-big">4.7</span>
+          <div>
+            <div class="stars" aria-label="4.7 out of 5 stars">★★★★★</div>
+            <p class="reviews-count">Based on 1,284 reviews</p>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">"The ANC genuinely surprised me at this price. I use these on every flight now."</p>
+            <p class="review-author">— Priya S., verified buyer</p>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">"Battery life easily gets me through a full work week of calls without a case top-up."</p>
+            <p class="review-author">— Marcus T., verified buyer</p>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <p class="review-text">"Sound is great out of the box, and the EQ presets in the app make it even better."</p>
+            <p class="review-author">— Elena R., verified buyer</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- BUY -->
+      <section id="buy" class="section section-alt buy-section">
+        <h2>Choose your color</h2>
+        <p class="buy-intro">Free shipping and a 30-day return window on every order.</p>
+
+        <form class="buy-form" id="buyForm">
+          <fieldset class="color-picker">
+            <legend class="sr-only">Choose a color</legend>
+            <label class="color-option">
+              <input type="radio" name="color" value="violet" checked />
+              <span class="swatch swatch--violet" aria-hidden="true"></span>
+              Violet
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="cyan" />
+              <span class="swatch swatch--cyan" aria-hidden="true"></span>
+              Cyan
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="coral" />
+              <span class="swatch swatch--coral" aria-hidden="true"></span>
+              Coral
+            </label>
+            <label class="color-option">
+              <input type="radio" name="color" value="slate" />
+              <span class="swatch swatch--slate" aria-hidden="true"></span>
+              Slate
+            </label>
+          </fieldset>
+
+          <div class="qty-row">
+            <label for="qty">Quantity</label>
+            <div class="qty-stepper">
+              <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" id="qty" name="qty" value="1" min="1" max="10" inputmode="numeric" />
+              <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-wide">Add to cart — $129</button>
+          <p class="buy-confirmation" id="buyConfirmation" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Aurora Buds. A fictional product built for learning purposes. Deployed on Vercel.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

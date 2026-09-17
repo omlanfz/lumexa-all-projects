@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal Match — Memory Card Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🪐 Signal Match</h1>
+      <p class="subtitle">Find every matching pair of signals before the crew runs out of moves.</p>
+    </header>
+
+    <div class="controls">
+      <div class="difficulty-group" role="group" aria-label="Difficulty">
+        <button type="button" class="difficulty-btn" data-pairs="4">Easy (4 pairs)</button>
+        <button type="button" class="difficulty-btn active" data-pairs="6">Medium (6 pairs)</button>
+        <button type="button" class="difficulty-btn" data-pairs="8">Hard (8 pairs)</button>
+      </div>
+      <button type="button" id="restart-btn">Restart</button>
+    </div>
+
+    <div class="stats-bar">
+      <span>Moves: <strong id="move-count">0</strong></span>
+      <span>Time: <strong id="timer">0:00</strong></span>
+      <span>Best: <strong id="best-score">--</strong></span>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <p id="status" class="status" role="status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

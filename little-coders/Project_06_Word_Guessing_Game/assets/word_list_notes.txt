@@ -1,0 +1,19 @@
+Word Guessing Game - Secret Word List
+======================================
+The following 10 kid-friendly words are used as the secret word list in
+word_guessing_game.py. All are common, age-appropriate words for ages 6-11.
+
+1. python
+2. rocket
+3. planet
+4. galaxy
+5. wizard
+6. dragon
+7. castle
+8. puzzle
+9. rainbow
+10. volcano
+
+Teachers and students can add more words to the list in word_guessing_game.py
+by following the same format: put the new word in lowercase letters, inside
+quotes, separated by a comma.

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crew Task Tracker — Interactive To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🛰️ Crew Task Tracker</h1>
+      <p class="subtitle">Plan the mission. Track every task. Nothing gets lost.</p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="What needs to get done?"
+        autocomplete="off"
+        maxlength="140"
+      />
+      <select id="priority-select" aria-label="Task priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit" id="add-btn">Add Task</button>
+    </form>
+    <p id="form-error" class="form-error" role="alert"></p>
+
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter tasks">
+        <button type="button" data-filter="all" class="filter-btn active">All</button>
+        <button type="button" data-filter="active" class="filter-btn">Active</button>
+        <button type="button" data-filter="completed" class="filter-btn">Completed</button>
+      </div>
+      <button type="button" id="clear-completed-btn" class="ghost-btn">Clear Completed</button>
+    </div>
+
+    <p id="task-counter" class="task-counter"></p>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty-state" class="empty-state" hidden>No tasks here. Add one above to get started.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

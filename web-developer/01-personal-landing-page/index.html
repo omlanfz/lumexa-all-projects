@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira Vasquez — Front-End Developer</title>
+    <meta name="description" content="Personal landing page of Mira Vasquez, a junior front-end developer and student building accessible, playful web experiences." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#top" class="logo">MV<span class="logo-dot">.</span></a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Hi, I'm</p>
+          <h1>Mira Vasquez</h1>
+          <p class="hero-tagline">
+            A 17-year-old front-end developer who loves turning ideas into
+            clean, fast, accessible websites — one semantic tag at a time.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit-ring"></div>
+          <div class="orbit-ring orbit-ring--small"></div>
+          <div class="planet"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <p>
+            I started coding at 14 by editing my class's science-fair website,
+            and I haven't stopped since. I'm currently a student focused on
+            HTML, CSS, and JavaScript fundamentals, and I care a lot about
+            building things that work well for everyone — fast load times,
+            readable typography, and layouts that hold up on any screen size.
+          </p>
+          <p>
+            Outside of code, I run the astronomy club at my school, where I
+            help other students build simple star-tracking pages. I'm looking
+            for opportunities to keep learning, collaborate on real projects,
+            and eventually build software that makes space science more
+            approachable for young people.
+          </p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section section-alt">
+        <h2>Skills</h2>
+        <div class="skills-row">
+          <div class="skill-card">
+            <h3>HTML5</h3>
+            <p>Semantic, accessible markup structured for real-world content.</p>
+          </div>
+          <div class="skill-card">
+            <h3>CSS3</h3>
+            <p>Responsive layouts, custom properties, and polished detail work.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Flexbox &amp; Grid</h3>
+            <p>Confident building both simple rows and complex two-dimensional layouts.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Git &amp; Vercel</h3>
+            <p>Version control and shipping real, live static sites to the web.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <div class="projects-gallery">
+          <article class="project-card">
+            <div class="project-card__media project-card__media--one"></div>
+            <div class="project-card__body">
+              <h3>Star Chart Explorer</h3>
+              <p>A hand-coded interactive map of constellations built with pure HTML and CSS Grid.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media project-card__media--two"></div>
+            <div class="project-card__body">
+              <h3>Astronomy Club Site</h3>
+              <p>A responsive site for my school's astronomy club, with a meeting calendar and photo gallery.</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media project-card__media--three"></div>
+            <div class="project-card__body">
+              <h3>Mission Countdown</h3>
+              <p>A small vanilla-JS countdown timer styled to look like a launch control panel.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-alt">
+        <h2>Get in Touch</h2>
+        <p class="contact-intro">
+          I'm always happy to talk about web development, astronomy, or
+          project collaborations. Reach out through any of the channels below.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:mira.vasquez.dev@example.com">mira.vasquez.dev@example.com</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/example-mira" target="_blank" rel="noopener noreferrer">github.com/example-mira</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/example-mira" target="_blank" rel="noopener noreferrer">linkedin.com/in/example-mira</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Mira Vasquez. Built with HTML &amp; CSS. Deployed on Vercel.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+:root {
+  --bg: #0b0e1a;
+  --panel: #141a30;
+  --panel-2: #1e2540;
+  --matched: #17331f;
+  --border: #2a3358;
+  --text: #e6ecff;
+  --muted: #8b93b0;
+  --accent: #4ade80;
+  --accent-2: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #16204a 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  padding: 2rem 1rem 4rem;
+  text-align: center;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+
+.subtitle {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.difficulty-group {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.difficulty-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.difficulty-btn.active {
+  background: var(--panel-2);
+  color: var(--text);
+  border-color: var(--accent-2);
+}
+
+#restart-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent-2);
+  color: #08122a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  filter: brightness(1.08);
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.stats-bar strong {
+  color: var(--text);
+}
+
+.board {
+  display: grid;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tile:hover:not(.revealed):not(.matched) {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+}
+
+.tile.revealed {
+  background: var(--panel-2);
+  border-color: var(--accent-2);
+}
+
+.tile.matched {
+  background: var(--matched);
+  border-color: var(--accent);
+  cursor: default;
+}
+
+.status {
+  min-height: 1.5em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .tile {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+}

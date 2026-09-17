@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Mira Vasquez — Personal Landing Page
+   ========================================================================== */
+
+:root {
+  --color-bg: #f4f6fb;
+  --color-bg-alt: #eef1fa;
+  --color-surface: #ffffff;
+  --color-text: #1a1a2e;
+  --color-text-muted: #565b73;
+  --color-primary: #4361ee;
+  --color-primary-dark: #1a1a2e;
+  --color-accent: #7209b7;
+  --color-border: #dde3f0;
+  --radius: 12px;
+  --max-width: 960px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+.section {
+  padding: 48px 20px;
+}
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section > h2 {
+  max-width: var(--max-width);
+  margin: 0 auto 24px;
+  font-size: 1.7rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section > h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* ---------- HEADER / NAV ---------- */
+.site-header {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-dot {
+  color: var(--color-accent);
+}
+
+.site-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.site-header nav a {
+  color: #c7d3ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.hero-tagline {
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.planet {
+  position: absolute;
+  inset: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #a6c1ff, var(--color-primary) 60%, var(--color-primary-dark));
+  box-shadow: 0 0 40px rgba(67, 97, 238, 0.5);
+  animation: spin 18s linear infinite;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px dashed rgba(67, 97, 238, 0.35);
+  border-radius: 50%;
+  animation: spin 24s linear infinite;
+}
+
+.orbit-ring--small {
+  inset: 20px;
+  border-color: rgba(114, 9, 183, 0.3);
+  animation-duration: 14s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- ABOUT ---------- */
+.about-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- SKILLS ---------- */
+.skills-row {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 22px;
+  flex: 1 1 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(26, 26, 46, 0.08);
+}
+
+.skill-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.skill-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-gallery {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(26, 26, 46, 0.12);
+}
+
+.project-card__media {
+  height: 150px;
+}
+
+.project-card__media--one {
+  background: linear-gradient(135deg, #4361ee, #7209b7);
+}
+
+.project-card__media--two {
+  background: linear-gradient(135deg, #06b6d4, #4361ee);
+}
+
+.project-card__media--three {
+  background: linear-gradient(135deg, #7209b7, #f72585);
+}
+
+.project-card__body {
+  padding: 18px 20px;
+  flex: 1;
+}
+
+.project-card__body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.project-card__body p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-intro {
+  max-width: var(--max-width);
+  margin: 0 auto 24px;
+  color: var(--color-text-muted);
+}
+
+.contact-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-list li {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.contact-label {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  min-width: 90px;
+}
+
+.contact-list a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-list a:hover,
+.contact-list a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  background-color: var(--color-primary-dark);
+}
+
+.site-footer p {
+  color: #c7d3ff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 640px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 80px 20px;
+  }
+
+  .hero-tagline {
+    margin: 0 0 24px;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- ACCESSIBILITY: reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
