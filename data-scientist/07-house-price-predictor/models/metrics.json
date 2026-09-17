@@ -1,0 +1,30 @@
+{
+  "best_model": "random_forest_tuned",
+  "results": {
+    "linear_regression": {
+      "MAE": 49645.49244453642,
+      "MSE": 4778547424.025955,
+      "RMSE": 69127.03829924985,
+      "R2": 0.635339233523819
+    },
+    "random_forest": {
+      "MAE": 31889.922656811665,
+      "MSE": 2461153552.2269216,
+      "RMSE": 49610.01463643124,
+      "R2": 0.8121843185529156
+    },
+    "random_forest_tuned": {
+      "MAE": 32968.47852466047,
+      "MSE": 2453324526.2586555,
+      "RMSE": 49531.046084841124,
+      "R2": 0.8127817676011339,
+      "best_params": {
+        "model__n_estimators": 150,
+        "model__min_samples_split": 10,
+        "model__min_samples_leaf": 1,
+        "model__max_features": "log2",
+        "model__max_depth": 20
+      }
+    }
+  }
+}
